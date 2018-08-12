@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+    content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+
+  <!-- KISS Wizard -->
+  <script src="../dist/step-router.js"></script>
+
+  <!-- Static steps -->
+  <script src="./static-steps/step1Controller.js"></script>
+  <script src="./static-steps/step2Controller.js"></script>
+  <script src="./static-steps/registration.js"></script>
+
+  <!-- user registration steps -->
+  <script src="./registration-steps/registerStep1Controller.js"></script>
+  <script src="./registration-steps/registerStep2Controller.js"></script>
+  <script src="./registration-steps/registerStep3Controller.js"></script>
+  <script src="./registration-steps/registration.js"></script>
+
+
+  <!-- random user steps -->
+  <script src="./random-user-steps/randomStep1Controller.js"></script>
+  <script src="./random-user-steps/randomStep2Controller.js"></script>
+  <script src="./random-user-steps/registration.js"></script>
+
+  <script>
+    "use strict";
+
+    // DOM ready configure each demo
+    window.onload = function () {
+      // Demo 1
+      initStaticnWizard();
+
+      // Demo 2
+      initRegistrationWizard();
+
+      // Demo 3
+      initRandomUserWizard();
+    };
+  </script>
+</head>
+<body style="text-align: center; padding-bottom: 50px; margin: 0; padding: 0 0 100px 0;">
+  <header>
+    <div class="container wrapper">
+      <div>
+        <a href="http://shahzadhuq.com/">Shahzad Huq</a>
+      </div>
+      <div><h3>KISSWizard Demos</h3></div>
+      <div>
+        <a href="#">GitHub Link</a>
+        <div>
+        </div>
+  </header>
+  <div class="container">
+      <br/>
+      <br/>
+    <p>Following examples illustrate that KISSWizard easily works with any flavor of steps (HTML/CSS/JS).</p>
+  <p>KISSWizard simply focuses on navigation among the steps without getting in your way of building the steps.</p>
+    <br/>
+
+
+    <!-- Static content wizard -->
+    <h3>Demo 1: Two steps with static content</h3>
+    <div id="static-wizard"></div>
+
+    <div class="divider"></div>
+
+    <!-- User registration wizard  -->
+    <h3>Demo 2: Three steps user registration flow</h3>
+    <div id="registration-wizard"></div>
+
+    <div class="divider"></div>
+
+    <!-- Fetch and user input wizard  -->
+    <h3>Demo 3: Steps including AJAX calls </h3>
+    <div id="random-user-wizard"></div>
+  </div>
+
+
+  <footer>
+    <div>@Copyright 2018 - Shahzad Huq</div>
+  </footer>
+</body>
+
+</html>
