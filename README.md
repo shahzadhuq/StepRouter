@@ -11,10 +11,10 @@ Let me know introduce you to library called __**StepRouter**__.  It is designed 
 
 You can find more details in the sections below.
 
-# Demo
+# StepRouter Demo
 Checkout the [Live Demos](https://steprouter.azurewebsites.net/) showcasing different type of processes whose navigation is managed by __**StepRouter**__ library.
 
-# How to use it?
+# StepRouter Usage
 In just three steps you can offload your user navigation needs.
 
 1. Add the ```step-router.js``` reference in your master page (available in this repository under 'dist' folder).
@@ -50,7 +50,7 @@ const myStepRouterCtx = new StepRouter({
 
 To better undrestand how StepRouter works, let's walkthrough the flow below:
 
-## Step Configuration Details
+## StepRouter Configuration Details
 
 1. Each registered step will be lazy loaded on-demand; when step is needed to be shown
 2. Each step configuration must adhere to the following:
@@ -59,7 +59,7 @@ To better undrestand how StepRouter works, let's walkthrough the flow below:
 - All callbacks (viewAsync, nextAsync previousAsync, and skipAsync) must be return a ```Promise```
 - StepRouter responds to next/previous/skip action as long as they are registered properly in your step.  For example, action 'next' would need to be specified as ```onclick="stepRouterCtx.next()"```.
 
-## Step Router Details
+## StepRouter Details
 
 Upon loading a step, StepRouter does the following:
 
@@ -73,19 +73,19 @@ Upon loading a step, StepRouter does the following:
   - If Promise is fulfilled, StepRouter will determine the next step with respect to current step and then navigate the user
   - If Promise is rejected, then StepRouter will simply show the reason returned by step
 
-# Step Router Settings
+# StepRouter Settings
 
 Following tables show various settings and actions available for the KissWizard.
 
 | Category        | Name         | Required? | Type | Description  |
 |-------------|-------------|:-----:|:-----:| -----|
-| Styles | .wizard-wrapper | n/a | n/a | FYI: This is the most outer wrapper for the wizard
-| Styles | .step-loader | n/a | n/a | FYI: This controls the styling for the spinner shown
-| Styles | .error-wrapper | n/a | n/a | FYI: Manages styling for the error message and clear button
-| Styles | .error-wrapper | n/a | n/a | FYI: Manages styling for the error message and clear button
-| Styles | .error-wrapper .message | n/a | n/a | FYI: styling for the error message text
-| Styles | .error-wrapper .clear | n/a | n/a | FYI: styling for the error message clear button
-| Styles | .step-wrapper | n/a | n/a | FYI: styling for the wrapper containing your set's UI
+| Styles | .wizard-wrapper | n/a | n/a | FYI only: This is the most outer wrapper for the wizard
+| Styles | .step-loader | n/a | n/a | FYI only: This controls the styling for the spinner shown
+| Styles | .error-wrapper | n/a | n/a | FYI only: Manages styling for the error message and clear button
+| Styles | .error-wrapper | n/a | n/a | FYI only: Manages styling for the error message and clear button
+| Styles | .error-wrapper .message | n/a | n/a | FYI only: styling for the error message text
+| Styles | .error-wrapper .clear | n/a | n/a | FYI only: styling for the error message clear button
+| Styles | .step-wrapper | n/a | n/a | FYI only: styling for the wrapper containing your set's UI
 | StepRouter config | wizardAnchorId | Yes | string | DOM element 'id' where wizard will inject the UI
 | StepRouter config | stepRouterCtx  | Yes | string | Variable that holds reference to the 'NEW' StepRouter instance and available under the 'window' object
 | Step config | id  | Yes | string | Acts as the primary key for the registered step; must be unique
@@ -97,7 +97,7 @@ Following tables show various settings and actions available for the KissWizard.
 | Step config | callback.previous  | No | string | An Async method available on the controller that is called when 'previous' is requested via the UI; must implement Promise
 | Step config | callback.skip  | No | string | An Async method available on the controller that is called when 'skip' is requested via the UI; must implement Promise
 
-# Actions
+# StepRouter Actions
 
 | Category        | Name         | Required? | Type | Description  |
 |-------------|-------------|:-----:|:-----:| -----|
