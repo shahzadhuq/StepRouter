@@ -7,7 +7,7 @@ class registerStep3Controller {
     `<h1>Fake Register</h1>
       <hr/>
       <div>Your fake registration is complete.</div>
-      <div>Hope you enjoyed KISSWizard simplicity!</div>
+      <div>Hope you enjoyed StepRouter simplicity!</div>
       `;
   }
 
